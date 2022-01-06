@@ -8,7 +8,8 @@
     "prettier": "lint-staged",
     "build-css": "node-sass src/resources/scss/ --output src/public/css/",
     "sass": "nodemon -e scss -x npm run build-css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -25,14 +26,14 @@
     "url": "https://github.com/DonaldVN1515/Blog/issues"
   },
   "homepage": "https://github.com/DonaldVN1515/Blog#readme",
-    "lint-staged": {
-      "src/**/*.{js, json, scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
-    },
-    "husky":{
-      "hooks": {
-        "pre-commit": "lint-staged"
-      }
-    },
+  "lint-staged": {
+    "src/**/*.{js, json, scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.3.5",
@@ -40,7 +41,7 @@
     "sass": "^1.45.2"
   },
   "devDependencies": {
-    "husky": "^7.0.4",
+    "husky": "^7.0.0",
     "lint-staged": "^12.1.5",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.12",
