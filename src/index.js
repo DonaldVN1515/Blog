@@ -9,7 +9,7 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, "public")));
 
 // Middle Ware
-app.use(
+				app.use(
 	express.urlencoded({
 		extended: true,
 	})
