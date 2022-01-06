@@ -14,7 +14,10 @@ app.use(express.static(path.join(__dirname, "public")));
 		extended: true,
 	})
 );
-app.use(express.json());
+
+
+
+				app.use(express.json());
 
 // XML HTTP Request, axios, fetch
 
